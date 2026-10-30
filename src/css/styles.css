@@ -60,8 +60,6 @@ strong { font-weight: 650; }
 .link-claro { color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: var(--ciano); text-decoration-thickness: 3px; text-underline-offset: 6px; padding-block: 12px; }
 .link-claro:hover { text-decoration-color: #fff; }
 
-.eyebrow { font-family: var(--fonte-titulo); font-size: .8125rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ciano); margin-bottom: 16px; max-width: none; }
-.eyebrow--escuro { color: var(--ciano-texto); }
 
 /* ---------- Topo ---------- */
 .topo { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .96); backdrop-filter: blur(8px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
@@ -70,24 +68,13 @@ strong { font-weight: 650; }
 .topo__logo { display: block; flex: none; line-height: 0; }
 .topo__logo img { width: 190px; height: auto; }
 
-.menu-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 16px; background: var(--cinza); color: var(--navy); border: 0; border-radius: 999px; font: 650 .9375rem var(--fonte-titulo); cursor: pointer; }
-.menu-btn__icone, .menu-btn__icone::before, .menu-btn__icone::after { display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s, opacity .2s; }
-.menu-btn__icone { position: relative; }
-.menu-btn__icone::before, .menu-btn__icone::after { content: ""; position: absolute; left: 0; }
-.menu-btn__icone::before { top: -6px; }
-.menu-btn__icone::after { top: 6px; }
-.menu-btn[aria-expanded="true"] .menu-btn__icone { background: transparent; }
-.menu-btn[aria-expanded="true"] .menu-btn__icone::before { top: 0; transform: rotate(45deg); }
-.menu-btn[aria-expanded="true"] .menu-btn__icone::after { top: 0; transform: rotate(-45deg); }
 
-.menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 8px; padding: 12px var(--gutter) 24px; background: #fff; border-bottom: 1px solid var(--linha); box-shadow: 0 16px 30px rgba(4, 43, 75, .12); }
-.js .menu--aberto { display: flex; }
-.no-js .menu { display: flex; position: static; box-shadow: none; padding: 0; }
-.no-js .menu-btn { display: none; }
-.menu ul { display: grid; }
-.menu li a { display: block; padding: 14px 4px; border-bottom: 1px solid var(--cinza); font-weight: 600; text-decoration: none; color: var(--navy); }
+.menu { display: flex; align-items: center; gap: 28px; }
+.menu ul { display: none; }
+.menu li a { display: block; padding: 8px 0; font-weight: 600; text-decoration: none; color: var(--navy); }
 .menu li a[aria-current="true"] { color: var(--ciano-texto); }
-.menu .btn { margin-top: 12px; }
+.menu .btn { margin: 0; }
+.so-desk { display: none; }
 
 /* ---------- Abertura ---------- */
 .hero { position: relative; background: var(--navy); color: #fff; overflow: hidden; }
@@ -196,11 +183,16 @@ strong { font-weight: 650; }
 .dados dd { font-weight: 500; }
 
 /* Rodapé */
-.rodape { padding-block: 56px 48px; background: #021d34; color: #c4d8e8; }
-.rodape__interno { display: grid; gap: 28px; align-items: start; }
-.rodape__logo { display: block; width: 220px; line-height: 0; }
-.rodape__texto { display: grid; gap: 8px; }
-.rodape__aviso { font-size: .875rem; line-height: 1.55; color: #9fb9cd; max-width: 68ch; }
+.rodape { padding-block: 72px 36px; background: #021d34; color: #c4d8e8; }
+.rodape__cols { display: grid; gap: 36px; }
+.rodape__col { display: grid; gap: 6px; align-content: start; font-size: .9688rem; }
+.rodape__col h2 { margin-bottom: 6px; font: 700 1.0625rem var(--fonte-titulo); color: #fff; letter-spacing: 0; }
+.rodape__col ul { display: grid; gap: 6px; }
+.rodape__col p { max-width: 34ch; }
+.rodape__marca { display: block; width: min(100%, 320px); margin-top: clamp(40px, 6vw, 64px); line-height: 0; }
+.rodape__marca img { width: 100%; height: auto; }
+.rodape__fim { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 28px; font-size: .875rem; color: #9fb9cd; }
+.rodape__fim p { max-width: none; }
 .rodape a { color: #fff; font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--ciano); }
 .rodape a:hover { text-decoration-color: #fff; }
 
@@ -218,6 +210,7 @@ strong { font-weight: 650; }
 
 /* ---------- Tablet ---------- */
 @media (min-width: 640px) {
+  .rodape__cols { grid-template-columns: repeat(2, 1fr); }
   .servicos { grid-template-columns: repeat(2, 1fr); }
   .servico--largo { grid-column: 1 / -1; grid-template-columns: auto 1fr; align-items: start; gap: 20px; }
   .pilares { grid-template-columns: repeat(3, 1fr); }
@@ -226,12 +219,14 @@ strong { font-weight: 650; }
 
 /* ---------- Desktop ---------- */
 @media (min-width: 960px) {
+  .rodape__cols { grid-template-columns: 1.3fr 1fr .9fr 1fr; gap: 48px; }
   :root { --topo-h: 84px; }
-  .menu-btn { display: none; }
   .topo__logo img { width: 210px; }
-  .menu, .js .menu { display: flex; position: static; flex-direction: row; align-items: center; gap: 28px; padding: 0; background: none; border: 0; box-shadow: none; }
+  .menu { gap: 28px; }
   .menu ul { display: flex; gap: 26px; }
-  .menu li a { padding: 8px 0; border: 0; font-size: .9375rem; position: relative; }
+  .so-cel { display: none; }
+  .so-desk { display: inline; }
+  .menu li a { font-size: .9375rem; position: relative; }
   .menu li a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 2px; background: var(--ciano); transform: scaleX(0); transition: transform .2s; }
   .menu li a:hover::after, .menu li a[aria-current="true"]::after { transform: scaleX(1); }
   .menu .btn { margin: 0; }
@@ -249,8 +244,7 @@ strong { font-weight: 650; }
   .passo::before { left: 22px; top: 22px; }
   .entrega { grid-template-columns: .9fr 1.1fr; padding: 36px; gap: 48px; }
   .compromisso { padding: 56px 64px; }
-  .rodape__interno { grid-template-columns: 240px 1fr; gap: 64px; }
-}
+  }
 @media (min-width: 1100px) {
   .menu ul { gap: 34px; }
 }

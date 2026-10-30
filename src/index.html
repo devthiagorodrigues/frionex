@@ -41,10 +41,6 @@
       <a class="topo__logo" href="#inicio" aria-label="Frionex Transportes Refrigerados, ir para o início">
         <img src="img/logo-480.webp" srcset="img/logo-240.webp 240w, img/logo-480.webp 480w" sizes="190px" width="480" height="127" alt="Frionex Transportes Refrigerados">
       </a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
-        <span class="menu-btn__icone" aria-hidden="true"></span>
-        <span class="menu-btn__texto">Menu</span>
-      </button>
       <nav class="menu" id="menu" aria-label="Principal">
         <ul>
           <li><a href="#servicos">Serviços</a></li>
@@ -53,7 +49,7 @@
           <li><a href="#cuidado">Cuidados</a></li>
           <li><a href="#equipe">Estrutura</a></li>
         </ul>
-        <a class="btn btn--primario btn--compacto" href="#cotacao">Solicitar cotação</a>
+        <a class="btn btn--primario btn--compacto" href="#cotacao"><span class="so-cel">Cotação</span><span class="so-desk">Solicitar cotação</span></a>
       </nav>
     </div>
   </header>
@@ -64,7 +60,6 @@
     <section class="hero" id="inicio" aria-labelledby="titulo-hero">
       <div class="hero__interno caixa">
         <div class="hero__texto">
-          <p class="eyebrow">Transportes refrigerados · São Paulo e Região Metropolitana</p>
           <h1 id="titulo-hero">Sua carga refrigerada, do jeito combinado, até o destino.</h1>
           <p class="lead">A Frionex transporta alimentos refrigerados e congelados com planejamento, horários acordados e comunicação clara do início ao fim do serviço.</p>
           <div class="acoes">
@@ -103,7 +98,6 @@
     <section class="secao" id="servicos" aria-labelledby="titulo-servicos">
       <div class="caixa">
         <header class="secao__cab">
-          <p class="eyebrow eyebrow--escuro">Nossos serviços</p>
           <h2 id="titulo-servicos">Coleta e entrega com temperatura controlada</h2>
           <p class="secao__intro">Atendemos necessidades pontuais e empresas que precisam de uma rotina de coletas e entregas.</p>
         </header>
@@ -144,7 +138,6 @@
     <section class="secao secao--cinza" id="atendemos" aria-labelledby="titulo-atendemos">
       <div class="caixa duas-colunas">
         <div class="duas-colunas__texto">
-          <p class="eyebrow eyebrow--escuro">Quem atendemos</p>
           <h2 id="titulo-atendemos">Empresas que movimentam produtos refrigerados ou congelados</h2>
           <p class="secao__intro">Nosso foco é o setor de alimentos.</p>
           <ul class="lista-ciano">
@@ -170,7 +163,6 @@
           [[img tecnico-painel | Técnico da Frionex conferindo o painel de temperatura do baú, marcando -18 °C | (min-width: 960px) 540px, 92vw | | lazy | 50% 40%]]
         </figure>
         <div class="duas-colunas__texto">
-          <p class="eyebrow eyebrow--escuro">O que transportamos</p>
           <h2 id="titulo-cargas">Cargas alimentícias refrigeradas e congeladas</h2>
           <p>Carnes embaladas, laticínios, alimentos preparados, massas e outros produtos compatíveis com os nossos veículos e com as condições da operação.</p>
           <p>Antes de aceitar um serviço, precisamos conhecer o <strong>produto, a embalagem, o volume, o peso e a temperatura exigida</strong>. Também avaliamos se há restrições de acondicionamento ou incompatibilidade entre mercadorias.</p>
@@ -187,7 +179,6 @@
     <section class="secao secao--navy" id="regiao" aria-labelledby="titulo-regiao">
       <div class="caixa duas-colunas">
         <div class="duas-colunas__texto">
-          <p class="eyebrow">Onde atuamos</p>
           <h2 id="titulo-regiao">São Paulo e Região Metropolitana</h2>
           <p>Nosso foco operacional é a cidade de São Paulo e a Região Metropolitana. Viagens para outras localidades do estado são avaliadas conforme distância, disponibilidade, volume e condições de atendimento.</p>
           <p>A cobertura de cada endereço é confirmada no orçamento. Para nós, é essencial assumir apenas operações que conseguimos planejar e executar adequadamente.</p>
@@ -213,7 +204,6 @@
     <section class="secao" id="como-funciona" aria-labelledby="titulo-como">
       <div class="caixa">
         <header class="secao__cab">
-          <p class="eyebrow eyebrow--escuro">Como funciona a contratação</p>
           <h2 id="titulo-como">Do primeiro contato à carga programada</h2>
           <p class="secao__intro">Tudo registrado antes da contratação, para você saber quem retira a mercadoria, em que condições, quando chega e com quem falar.</p>
         </header>
@@ -267,7 +257,6 @@
     <section class="secao secao--cinza" id="cuidado" aria-labelledby="titulo-cuidado">
       <div class="caixa">
         <header class="secao__cab">
-          <p class="eyebrow eyebrow--escuro">Como cuidamos do transporte</p>
           <h2 id="titulo-cuidado">Atenção em cada etapa da operação</h2>
         </header>
 
@@ -312,7 +301,6 @@
     <section class="secao" id="equipe" aria-labelledby="titulo-equipe">
       <div class="caixa">
         <header class="secao__cab">
-          <p class="eyebrow eyebrow--escuro">Nossa estrutura e nossa equipe</p>
           <h2 id="titulo-equipe">Pessoas, veículos e acompanhamento</h2>
         </header>
 
@@ -350,7 +338,6 @@
     <section class="secao secao--navy cotacao" id="cotacao" aria-labelledby="titulo-cotacao">
       <div class="caixa duas-colunas duas-colunas--topo">
         <div class="duas-colunas__texto">
-          <p class="eyebrow">Solicite uma cotação</p>
           <h2 id="titulo-cotacao">Conte o que você precisa transportar</h2>
           <p>O atendimento começa com uma conversa para entender a sua necessidade. Para preparar a proposta, tenha em mãos:</p>
           <ul class="checklist">
@@ -381,16 +368,42 @@
   </main>
 
   <footer class="rodape">
-    <div class="caixa rodape__interno">
-      <a class="rodape__logo" href="#inicio" aria-label="Frionex Transportes Refrigerados, voltar ao início">
-        <img src="img/logo-branco-480.webp" width="480" height="127" alt="Frionex Transportes Refrigerados" loading="lazy">
+    <div class="caixa">
+      <div class="rodape__cols">
+        <div class="rodape__col">
+          <h2>Atendimento</h2>
+          <p>{{endereco}}</p>
+          <p>{{horarios}}</p>
+          <p>São Paulo e Região Metropolitana</p>
+        </div>
+        <div class="rodape__col">
+          <h2>Contato</h2>
+          <p>Telefone {{telefone}}</p>
+          <p>{{email}}</p>
+        </div>
+        <div class="rodape__col">
+          <h2>Navegue</h2>
+          <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#atendemos">Quem atendemos</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#cuidado">Cuidados</a></li>
+            <li><a href="#cotacao">Solicitar cotação</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <h2>Empresa</h2>
+          <p>{{razaoSocial}}</p>
+          <p>CNPJ {{cnpj}}</p>
+          <p><a href="privacidade.html">Política de privacidade</a></p>
+        </div>
+      </div>
+      <a class="rodape__marca" href="#inicio" aria-label="Frionex Transportes Refrigerados, voltar ao início">
+        <img src="img/logo-branco-720.webp" width="720" height="190" alt="" loading="lazy">
       </a>
-      <div class="rodape__texto">
-        <p>{{razaoSocial}} · CNPJ {{cnpj}}</p>
-        <p>{{endereco}}</p>
-        <p class="rodape__aviso">© {{ano}} Frionex Transportes Refrigerados. Todos os direitos reservados.</p>
-        <p class="rodape__aviso"><a href="privacidade.html">Política de privacidade</a></p>
-        <p class="rodape__aviso">Desenvolvido por {{#if desenvolvedorUrl}}<a href="{{desenvolvedorUrl}}" rel="noopener" target="_blank">Thiago Labs<span class="sr-only"> (abre em nova aba)</span></a>{{else}}Thiago Labs{{/if}}</p>
+      <div class="rodape__fim">
+        <p>© {{ano}} Frionex Transportes Refrigerados. Todos os direitos reservados.</p>
+        <p>Desenvolvido por {{#if desenvolvedorUrl}}<a href="{{desenvolvedorUrl}}" rel="noopener" target="_blank">Thiago Labs<span class="sr-only"> (abre em nova aba)</span></a>{{else}}Thiago Labs{{/if}}</p>
       </div>
     </div>
   </footer>
