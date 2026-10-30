@@ -1,0 +1,18 @@
+{
+  "_leia": "Dados da empresa exibidos no site. Valores de exemplo (projeto demonstrativo). Depois de editar, rode: npm run build",
+
+  "dominio": "",
+  "_dominio": "Endereço final com https, sem barra no fim. Ex.: https://www.seudominio.com.br",
+
+  "razaoSocial": "Frionex Transportes Refrigerados Ltda.",
+  "cnpj": "00.000.000/0001-00",
+
+  "telefone": "(11) 4000-0000",
+  "email": "comercial@frionex.com.br",
+
+  "endereco": "Rua do Frio, 100, galpão 3 — Barra Funda, São Paulo/SP",
+  "horarios": "Segunda a sexta, das 7h às 18h · Sábado, das 7h às 12h",
+
+  "desenvolvedorUrl": "https://www.thiagolabs.com.br",
+  "ano": 2026
+}
